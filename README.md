@@ -1,42 +1,28 @@
-MERN Stack Coding Challenge
-Overview
-This project involves creating a backend and frontend application using the MERN stack. The primary goal is to interact with a third-party API, handle data processing on the backend, and display the processed data on the frontend using charts and tables.
+<h1>MERN Stack Coding Challenge</h1>
+Project Description:
+This project is a comprehensive MERN stack application that processes transaction data retrieved from a third-party API. The backend interacts with the API to seed a database with product transaction data, while the frontend allows users to view and interact with this data through a responsive interface. Key features include searching, filtering, and displaying transaction statistics, as well as visualizing data using bar and pie charts.
 
-Backend Task
-1. Data Initialization API
-Fetch data from a third-party API and initialize the database with seed data.
-API URL: https://s3.amazonaws.com/roxiler.com/product_transaction.json
-Request Method: GET
-Response Format: JSON
-2. API Endpoints
-List All Transactions:
+Backend Features:
+Data Initialization:
+The backend fetches transaction data from a third-party API and initializes the database with seed data.
+API Endpoints:
+List Transactions: Supports search and pagination, allowing users to search through transaction records based on product title, description, and price.
+Transaction Statistics: Returns key metrics such as the total sales amount, number of sold items, and number of unsold items for a selected month.
+Bar Chart Data: Provides a distribution of products across price ranges for the selected month.
+Pie Chart Data: Returns the number of items in unique categories for the selected month.
+Combined Data API: Aggregates data from the above endpoints into a single response for easy retrieval.
+Frontend Features:
+Transaction Table:
 
-API should support search and pagination on product transactions.
-Search by product title, description, or price.
-Default pagination: page = 1, per page = 10.
-Statistics API:
+Displays a paginated and searchable list of transactions.
+The table can be filtered by month, with a default month pre-selected.
+Statistics Display:
 
-Total sale amount of the selected month.
-Total number of sold items of the selected month.
-Total number of not sold items of the selected month.
-Bar Chart API:
+Shows the total sales amount, total sold items, and unsold items for the selected month.
+Bar and Pie Charts:
 
-Return the number of items within specific price ranges (0-100, 101-200, etc.) for the selected month.
-Pie Chart API:
-
-Find unique categories and the number of items sold in each category for the selected month.
-Combined Data API:
-
-Fetch data from the above three APIs and combine the results into a single JSON response.
-Frontend Task
-1. Transactions Table:
-Display a table of transactions based on the selected month.
-Provide a search functionality to filter transactions by title, description, or price.
-Use pagination to display the results.
-Dropdown to select months from January to December (default: March).
-2. Transactions Statistics:
-Display total sales amount, number of sold items, and number of unsold items for the selected month.
-3. Bar Chart:
-Display a bar chart showing the number of items in different price ranges for the selected month.
-
-
+Visualize product price distributions and product categories for the selected month, providing insights through interactive charts.
+Technology Stack:
+Frontend: React.js with Axios for API calls.
+Backend: Node.js, Express.js, and MongoDB for data storage.
+Charts: Integration of charting libraries (e.g., Chart.js or D3.js) to create interactive bar and pie charts.
